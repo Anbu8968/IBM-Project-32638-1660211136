@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liver Disease Prediction</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image:url("../static/images/bimg.png");
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: rgba(252, 17, 107, 0.74);
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color:black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 16%;
+  opacity: 0.9;
+  border-radius: 15px;
+
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+
+
+input[type=submit]:hover {
+  background-color: #45a049;
+  
+}
+.center {
+  /* margin: auto; */
+  margin-left: 20px;
+  width: 40%;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 25px;
+  
+}
+
+</style>
+</head>
+<body>
+    <!-- <p style="background-image: url('bimg.jpeg');"></p> -->
+
+  <h2><p style="text-align:center; color:white;font-size: 50px">Liver Disease Prediction</p></h2>
+   
+  <div class="center">
+  <form action="/predict"method="post">
+    <input type="text" id="Age" placeholder="Age " name="Age" required="required">
+    <br>
+    <input type="text" id="Gender" placeholder="Gender (Male:1 , female:0)" name="Gender" required="required">
+    <br>
+    <input type="text" id="Total_Bilirubin" placeholder="Total_Bilirubin" name="Total_Bilirubin" required="required">
+    <br>
+    <input type="text" id="Direct_Bilirubin" placeholder="Direct Bilirubin" name="Direct_Bilirubin" required="required">
+    <br>
+    <input type="text" id="Alkaline_Phosphotase" placeholder="Alkaline Phosphotase" name="Alkaline_Phosphotase"required="required">
+    <br>
+    <input type="text" id="Alamine_Aminotransferase" placeholder="Alamine Aminotransferase" name="Alamine_Aminotransferase" required="required">
+    <br>
+    <input type="text" id="Aspartate_Aminotransferase" placeholder="Aspartate_Aminotransferase" name="Aspartate_Aminotransferase" required="required">
+    <br>
+    <input type="text" id="Total_Protiens" placeholder="Total Protiens" name="Total_Protiens" required="required">
+    <br>
+    <input type="text" id="Albumin" placeholder="Albumin " name="Albumin" required="required">
+    <br>
+    <input type="text" id="Albumin_and_Globulin_Ratio" placeholder="Albumin and Globulin_Ratio" name="Albumin_and_Globulin_Ratio" required="required">
+    <br>
+    <br>
+
+   
+    <button type="submit" class="registerbtn"><b>Predict</b></button>
+</form>
+
+</div>
+
+
+</body>
+</html>
